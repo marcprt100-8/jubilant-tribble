@@ -1,0 +1,68 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav img {
+    max-height: 40px; /* Ajustez la hauteur du logo selon vos besoins */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+
+/* Appliquez un style à l'image avec la classe "contact-image" */
+.propos-image {
+  width: 300px; /* Exemple: 300 pixels */
+  height: auto;
+  width: 50%;
+}
+
+.service-image {
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.accueil-image {
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Autres styles pour le corps du document si nécessaire */
+/* Style pour le bouton */
+button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}

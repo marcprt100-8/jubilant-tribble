@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site</title>
+
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <img src="/img/logo.png" alt="Logo"/>
+    <ul>
+      <li><a href="#" onclick="loadPage('/accueil.html');">Accueil</a></li>
+      <li><a href="#" onclick="loadPage('/services.html');">Nos Services</a></li>
+      <li><a href="#" onclick="loadPage('/contact.html');">Contactez-nous</a></li>
+      <li><a href="#" onclick="loadPage('/Apropos.html');">À propos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Le contenu spécifique de chaque page ira ici -->
+  <div id="content"></div>
+
+  <script>
+    // Fonction pour charger le contenu de la page spécifiée
+    function loadPage(pagePath) {
+      // Charger le contenu de la page
+      fetch(pagePath)
+        .then(response => response.text())
+        .then(content => {
+          // Insérer le contenu dans la div 'content'
+          document.getElementById('content').innerHTML = content;
+        })
+        .catch(error => console.error('Erreur lors du chargement de la page', error));
+    }
+     // Charger la page d'accueil au chargement initial
+     loadPage('accueil.html');
+  </script>
+
+</body>
+</html>
